@@ -1,0 +1,71 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  .btn-voltar {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+    background-color: rgba(7, 37, 207, 0.877);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn-voltar:hover {
+    background-color:rgba(10, 30, 145, 0.877);
+  }
+  
+  .pagina-time {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, 0.774);
+    border-radius: 20px;
+    box-shadow: 7px 4px 13px 0px rgba(24, 23, 23, 0.934);
+    border: 1px;
+    margin-bottom: 72px;
+  }
+  
+  .escudo-grande {
+    max-width: 100px;
+    max-height: 152px;
+    display: block;
+    margin: 0 auto 32px;
+  }
+  
+  .topo-time {
+    text-align: center;
+  }
+  
+  .fundacao {
+    font-style: italic;
+    color: #ccc;
+  }
+  
+  section {
+    margin-top: 32px;
+  }
+
+  
+  ul {
+    padding-left: 1.5rem;
+    list-style: none;
+    padding-left: 32;
+    list-style-type: "🏆 ";
+  }
+  p{
+    text-align: justify;
+  }
+  
+
+  
