@@ -79,6 +79,7 @@ header nav ul li::after {
     width: 0;
     height: 3px;
     background-color: #007fff;
+    border-radius: 2px;
     transition: width 0.4s ease;
 }
 
