@@ -1,51 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
     color: var(--text);
     transition: 0.3s ease;
     overflow-x: hidden;
-}
-  
-body{
-    background: url('img/estadiog.png2.jpg') no-repeat center center/cover;
+    position: relative;
     height: 265vh;
     justify-content: center;
-    position: relative;
+
+    /* Variáveis de cor */
+    --bg: #1e1e1e;
+    --text: #f1f1f1;
+    --card-bg: #2a2a2a;
+    --btn-bg: #007fff;
+    --btn-text: #f1f1f1;
+
+    background: url('img/estadiog.png2.jpg') no-repeat center center/cover;
 }
 
+/* Camada preta semitransparente para facilitar leitura */
 body::after {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* camada preta semi-transparente */
+    background-color: rgba(0,0,0,0.7);
     z-index: -1;
 }
 
-
-body{
-    --bg: #1e1e1e;
-    --text: #f1f1f1;
-    --card-bg: #2a2a2a;
-    --btn-bg: #007fff;
-    --btn-text: #f1f1f1 ;
-}
-header{
+header {
     background: linear-gradient(135deg, #004add, #222833);
     color: white;
     text-align: center;
@@ -53,17 +49,16 @@ header{
     position: relative;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 30px;
     list-style: none;
     position: absolute;
     top: 60%;
     left: 78%;
-   
 }
 
-header nav ul li{
+header nav ul li {
     cursor: pointer;
     position: relative;
     color: white;
@@ -71,12 +66,12 @@ header nav ul li{
     font-weight: 600;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     color: white;
 }
 
-header nav ul li::after{
+header nav ul li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -84,73 +79,91 @@ header nav ul li::after{
     width: 0;
     height: 3px;
     background-color: #007fff;
-
-}
-header nav ul li:hover::after{
-    width: 100%;
     transition: width 0.4s ease;
 }
 
-.logo{
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.logo {
     position: absolute;
     left: 6%;
     top: 17%;
     width: 80px;
 }
- 
 
-
-
-
-#filtros-times{
+#filtros-times {
     text-align: center;
     padding: 16px;
     background-color: var(--card-bg);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    
 }
-#search{
+
+#search {
     padding: 12px 16px;
     width: 80%;
     max-width: 400px;
     border: 2px solid #004add;
     border-radius: 10px;
     font-size: 16px;
-    
-    }
+}
 
-#lista-times{
+#lista-times {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     padding: 32px;
 }
+
 .card-time {
+    width: 250px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
     background: var(--card-bg);
     padding: 16px;
-    text-align: center;
     transition: 0.3s;
-    
 }
-.card-time img{
+
+/* Sobreposição escura para melhor leitura */
+.card-time::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.card-time * {
+    position: relative;
+    z-index: 1;
+}
+
+.card-time img {
     max-width: 80px;
     margin-bottom: 16px;
-    transform: transform 0.3s;
+    transition: transform 0.3s ease;
 }
-.card-time:hover img{
+
+.card-time:hover img {
     transform: scale(1.1) rotate(3deg);
 }
 
-
-.btn-vermais:hover{
-    background-color:rgba(10, 30, 145, 0.877);
-    transition: 0.5s;
-    color: rgb(175, 175, 175);
-}
-/* Estilo geral*/
-.card-time > h2{
+.card-time > h2 {
     margin: 8px 0;
-    font-size: 26px;  
+    font-size: 26px;
+}
+
+.card-time p {
+    font-size: 16px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .card-time a {
@@ -162,239 +175,222 @@ header nav ul li:hover::after{
     font-weight: bold;
 }
 
-.card-time  p{
-    font-size: 16px;
-    font-family: "Bebas Neue", sans-serif;
-    margin-bottom: 16px;
-    text-align: center;
+.btn-vermais:hover {
+    background-color: rgba(10, 30, 145, 0.877);
+    transition: 0.5s;
+    color: rgb(175, 175, 175);
 }
 
-
-
-
-.card-time {
-    width: 250px;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Sobreposição escura pra facilitar leitura */
-  .card-time::before  {
-    content:'';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 0;
-  }
-  
-  /* Coloca o conteúdo acima da sobreposição */
-  .card-time * {
-    position: relative;
-    z-index: 1;
-  }
-
-   
-/* Cores por time */
-.atle-mg{
+/* Cores e fundos por time */
+.atle-mg {
     border-top: 6px solid #000000;
     background-image: url(img-fundo/bckg-galoredi.png);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    
 }
-.ecb{
-    border-top: 6px solid #0046ae; 
-    background-image: url(img-fundo/bckg-bahia.png); 
+
+.ecb {
+    border-top: 6px solid #0046ae;
+    background-image: url(img-fundo/bckg-bahia.png);
     box-shadow: 0 0 20px rgb(9, 86, 202);
 }
-.bot{
+
+.bot {
     border-top: 6px solid #000000;
     background-image: url(img-fundo/bckg-bota2.png);
     box-shadow: 0 0 20px rgba(253, 253, 253, 0.3);
 }
-.cea{
+
+.cea {
     border-top: 6px solid #000000;
     background-image: url(img-fundo/bckg-cea.png);
     box-shadow: 0 0 20px rgba(253, 253, 253, 0.3);
 }
-.sccp{
+
+.sccp {
     border-top: 6px solid #ffffff;
     background-image: url(img-fundo/bckg-sccp.png);
     box-shadow: 0 0 20px rgba(253, 253, 253, 0.3);
 }
-.cru{
+
+.cru {
     border-top: 6px solid #0033a0;
     background-image: url(img-fundo/bckg-cru.png);
     box-shadow: 0 0 20px #0033a0;
 }
-.fla{
+
+.fla {
     border-top: 6px solid #C52613;
     background-image: url(img-fundo/bckg-fla.jpeg);
     box-shadow: 0 0 20px #C52613;
 }
-.flu{
+
+.flu {
     border-top: 6px solid #8e0927;
     background-image: url(img-fundo/bckg-flu.png);
     box-shadow: 0 0 20px #8E0927;
 }
-.for{
+
+.for {
     border-top: 6px solid #003bb9;
     background-image: url(img-fundo/bckg-fort.png);
     box-shadow: 0 0 20px rgba(12, 9, 202, 0.3);
 }
-.gre{
+
+.gre {
     border-top: 6px solid #77bbff;
     background-image: url(img-fundo/bckg-gre.png);
     box-shadow: 0 0 20px #77bbff;
 }
-.inter{
+
+.inter {
     border-top: 6px solid #ba0c2f;
     background-image: url(img-fundo/bckg-inter.png.jpg);
     box-shadow: 0 0 20px #ba0c2f;
 }
-.juv{
+
+.juv {
     border-top: 6px solid #008000;
     background-image: url(img-fundo/bckg-juv.png.jpg);
     box-shadow: 0 0 20px #008000;
 }
-.mira{
+
+.mira {
     border-top: 6px solid rgb(255, 205, 41);
     background-image: url(img-fundo/bckg-mira.png.png);
     box-shadow: 0 0 20px rgba(255, 205, 41, 0.342);
 }
-.pal{
+
+.pal {
     border-top: 6px solid #006437;
     background-image: url(img-fundo/bckg-pal.png);
     box-shadow: 0 0 20px rgba(0, 100, 55, 0.342);
 }
-.rbb{
+
+.rbb {
     border-top: 6px solid #ffffff;
     background-image: url(img-fundo/bckg-brag.png);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.329);
 }
-.san{
+
+.san {
     border-top: 6px solid #000000;
     background-image: url(img-fundo/bckg-san.png);
     box-shadow: 0 0 20px rgba(253, 253, 253, 0.3);
 }
-.sao{
+
+.sao {
     border-top: 6px solid #d1001c;
     background-image: url(img-fundo/bckg-sao.png);
     box-shadow: 0 0 20px rgba(209, 0, 28, 0.342);
 }
-.spor{
+
+.spor {
     border-top: 6px solid #ff0000;
     background-image: url(img-fundo/bckg-sport.jpg);
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.342);
 }
-.vas{
+
+.vas {
     border-top: 6px solid #000000;
     background-image: url(img-fundo/bckg-vas.jpg);
     box-shadow: 0 0 20px rgba(253, 253, 253, 0.3);
 }
-.vi{
+
+.vi {
     border-top: 6px solid #ff0000;
     background-image: url(img-fundo/bckg-vito.jpg);
     box-shadow: 0 0 20px #ff0000;
 }
 
-footer{
+footer {
     text-align: center;
     background: linear-gradient(135deg, #004add, #222833);
     padding: 24px;
-
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     margin-top: 32px;
 }
 
-.rodape{
+.rodape {
     display: grid;
     text-align: justify;
 }
 
-.rodape h2{
+.rodape h2 {
     padding-bottom: 10px;
     font-size: 32px;
     text-align: center;
 }
 
-.sobre{
+.sobre {
     background: rgb(7, 17, 64);
     box-shadow: 9px 6px 5px 0px rgba(0, 0, 0, 0.778);
-    padding: 25px;
+    padding: 25px 25px 40px 25px;
     border-radius: 10px;
     max-width: 800px;
-    padding-bottom: 40px;
     margin: 30px auto;
 }
-.sobre p{
+
+.sobre p {
     font-size: 1.2em;
 }
 
-.contatos{
+.contatos {
     background: rgb(7, 17, 64);
     box-shadow: 9px 6px 5px 0px rgba(0, 0, 0, 0.778);
     padding: 25px;
     border-radius: 10px;
     width: 800px;
-    margin: 30px auto
+    margin: 30px auto;
 }
+
 .contatos ul {
     list-style: none;
     padding: 0;
     text-align: center;
-  }
-  
-  .contatos li {
+}
+
+.contatos li {
     margin: 10px 0;
-  }
-  
-  .contatos a {
+}
+
+.contatos a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1em;
     transition: 0.3s;
-  }
-  
-  .contatos a:hover {
-    color: #1e90ff;
-  }
+}
 
-  .contatos img{
+.contatos a:hover {
+    color: #1e90ff;
+}
+
+.contatos img {
     width: 30px;
-    bottom: 700px;
-  }
-  .lista {
+}
+
+.lista {
     list-style: none;
     padding: 0;
     text-align: left;
-  }
-  
-  .lista li {
+}
+
+.lista li {
     margin: 10px 0;
-  }
-  
-  .lista a {
+}
+
+.lista a {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
     text-decoration: none;
     color: white;
     font-size: 1.2em;
     transition: color 0.3s;
-  }
-  
-  .lista a:hover {
+}
+
+.lista a:hover {
     color: #1e90ff;
-  }
-  
-  .lista img {
-    width: 24px;
-    height: 24px;
-  }
-  
+}
+
+
