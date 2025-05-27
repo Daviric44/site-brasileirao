@@ -1,5 +1,5 @@
 <?php include "conexao.php"; // Inclui o arquivo de conexão com o banco ?> 
-<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="../intro.css">
 <form method="post">
     <h1>Cadastre-se aqui</h1>
     Nome: <input type="text" name="nome"><br>
@@ -7,7 +7,7 @@
     Senha: <input type="password" name="senha"><br>
     <input type="submit" value="Cadastrar">
 </form>
-<a href="../index.html">Voltar</a>
+<a href="../index.php">Voltar</a>
 
 <?php
 // Verifica se o formulário foi enviado
