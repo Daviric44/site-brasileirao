@@ -3,13 +3,24 @@ include "conexao.php";      // Conecta ao banco de dados
 session_start();            // Inicia a sessão para controlar login
 ?>
 
-<form method="post">
-    <h1>Faça login aqui</h1>
-    Email: <input type="email" name="email"><br>
-    Senha: <input type="password" name="senha"><br>
-    <input type="submit" value="Entrar">
-</form>
-<a href="../index.html">Voltar</a>
+ <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+<main class="container">
+    <form method="post">
+        <h1>Faça login aqui</h1>
+        <div class="input-box">
+            Email: <input type="email" name="email"><br>
+        </div>
+    
+        <div class="input-box">
+            Senha: <input type="password" name="senha"><br>
+        <div>
+    
+        <input class="login" type="submit" value="Entrar">
+    </form>
+    <a href="../index.html">Voltar</a>
+</main>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
