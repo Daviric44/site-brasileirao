@@ -1,13 +1,19 @@
 <?php include "conexao.php"; // Inclui o arquivo de conexão com o banco ?> 
 <link rel="stylesheet" href="../intro.css">
-<form method="post">
-    <h1>Cadastre-se aqui</h1>
-    Nome: <input type="text" name="nome"><br>
-    Email: <input type="email" name="email"><br>
-    Senha: <input type="password" name="senha"><br>
-    <input type="submit" value="Cadastrar">
-</form>
-<a href="../index.php">Voltar</a>
+<main class="container">
+    <form method="post">
+        <h1>Cadastre-se aqui</h1>
+        <div class="input-box">Nome: <input type="text" name="nome"><br></div>
+    
+        <div class="input-box">Email: <input type="email" name="email"><br></div>
+    
+        <div class="input-box">
+            Senha: <input type="password" name="senha"><br>
+            <input type="submit" value="Cadastrar">
+        </div>
+    </form>
+    <a href="../index.php">Voltar</a>
+</main>
 
 <?php
 // Verifica se o formulário foi enviado
