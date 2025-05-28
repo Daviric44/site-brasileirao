@@ -1,25 +1,26 @@
-<?php include "conexao.php"; // Inclui o arquivo de conexão com o banco ?> 
-<link rel="stylesheet" href="../cadastro.css">
-<main class="container">
+<?php include "conexao.php"; ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../cadastro.css">
+</head>
+<body>
+    <main class="container">
+        <img src="../img/logo-brasileirao2.png" alt="" id="logo">
+        <form method="post">
+            <h1>Cadastre-se aqui</h1>
+            <div class="input-box"><input type="text" name="nome" placeholder="Nome"><br></div>
+            <div class="input-box"><input type="email" name="email" placeholder="Email"></div>
+            <div class="input-box"><input type="password" name="senha" placeholder="Senha"><br></div>
+            <input type="submit" value="Cadastrar" class="cadastrar">
+        </form>
+        <button><a href="../index.php" class="voltar">Voltar</a></button>
+    </main>
+</body>
+</html>
 
-     <img src="../img/logo-brasileirao2.png" alt="" id="logo">
-
-    <form method="post">
-        <h1>Cadastre-se aqui</h1>
-        <div class="input-box"><input type="text" name="nome" placeholder="Nome"><br></div>
-    
-        <div class="input-box"><input type="email" name="email" placeholder="Email"></div>
-    
-        <div class="input-box">
-            <input type="password" name="senha" placeholder="Senha"><br>
-           
-        </div>
-        
-        <input type="submit" value="Cadastrar" class="cadastrar">
-
-    </form>
-    <a href="../index.php">Voltar</a>
-</main>
 
 <?php
 // Verifica se o formulário foi enviado
