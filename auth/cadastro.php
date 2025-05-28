@@ -12,8 +12,11 @@
     
         <div class="input-box">
             <input type="password" name="senha" placeholder="Senha"><br>
-            <input type="submit" value="Cadastrar" class="cadastrar">
+           
         </div>
+        
+        <input type="submit" value="Cadastrar" class="cadastrar">
+
     </form>
     <a href="../index.php">Voltar</a>
 </main>
