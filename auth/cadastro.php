@@ -1,14 +1,17 @@
 <?php include "conexao.php"; // Inclui o arquivo de conexão com o banco ?> 
-<link rel="stylesheet" href="../intro.css">
+<link rel="stylesheet" href="../cadastro.css">
 <main class="container">
+
+     <img src="../img/logo-brasileirao2.png" alt="" id="logo">
+
     <form method="post">
         <h1>Cadastre-se aqui</h1>
-        <div class="input-box">Nome: <input type="text" name="nome"><br></div>
+        <div class="input-box"><input type="text" name="nome" placeholder="Nome"><br></div>
     
-        <div class="input-box">Email: <input type="email" name="email"><br></div>
+        <div class="input-box"><input type="email" name="email" placeholder="Email"></div>
     
         <div class="input-box">
-            Senha: <input type="password" name="senha"><br>
+            <input type="password" name="senha" placeholder="Senha"><br>
             <input type="submit" value="Cadastrar">
         </div>
     </form>
