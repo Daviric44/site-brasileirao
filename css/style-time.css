@@ -19,6 +19,7 @@ body {
     border-radius: 8px;
     font-weight: bold;
     transition: background 0.3s;
+    position: fixed;
   }
   
   .btn-voltar:hover {
@@ -26,16 +27,24 @@ body {
   }
   
   .pagina-time {
-    max-width: 50%;
+    max-width: 45%;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 32px;
-    background-color: rgba(0, 0, 0, 0.774);
     border-radius: 20px;
     box-shadow: 7px 4px 13px 0px rgba(24, 23, 23, 0.934);
     border: 1px;
     margin-bottom: 72px;
   }
   
+  p, ul{
+    font-weight: 600;
+  }
+
+  h1, h2{
+    text-shadow: 3px 4px 3px rgba(0, 0, 0, 0.164);
+  }
+
   .escudo-grande {
     max-width: 100px;
     max-height: 152px;
@@ -60,12 +69,15 @@ body {
   ul {
     padding-left: 1.5rem;
     list-style: none;
-    padding-left: 32;
+    padding-left: 32px;
     list-style-type: "🏆 ";
   }
   p{
     text-align: justify;
   }
   
-
+  .video{
+    border-radius: 15px;
+    margin-top: 15px;
+  }
   

@@ -16,7 +16,7 @@
             <div class="input-box"><input type="password" name="senha" placeholder="Senha"><br></div>
             <input type="submit" value="Cadastrar" class="cadastrar">
         </form>
-        <button><a href="../index.php" class="voltar">Voltar</a></button>
+        <button><a href="../login.php" class="voltar">Voltar</a></button>
     </main>
 </body>
 </html>
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executa a query
     if ($conn->query($sql)) {
-        echo "Cadastro realizado! <a href='login.php' classe=realizado>Fazer login</a>"; // Sucesso
+        //echo "Cadastro realizado! <a href='../login.php' classe=realizado>Fazer login</a>"; // Sucesso
     } else {
         echo "Erro: " . $conn->error; // Erro ao inserir
     }

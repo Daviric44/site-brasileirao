@@ -1,5 +1,3 @@
-
-// Filtro por nome
 const searchInput = document.getElementById("search");
 const cards = document.querySelectorAll(".card-time");
 
